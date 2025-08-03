@@ -18,10 +18,13 @@ body {
   max-width: 100px;
   height: auto;
   margin-bottom: 20px;
+  display: block;
+  margin: 0 auto 20px; 
 }
 
 h1 {
   font-size: 1em;
   color: #333;
 }
+
 
