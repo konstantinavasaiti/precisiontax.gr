@@ -9,8 +9,8 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  color: #eaeaea;
+  background-color: #2c2c2c; /* Ανθρακί */
   padding: 0 20px;
 }
 
@@ -20,8 +20,8 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 20px 0;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #444;
 }
 
 .logo {
@@ -40,28 +40,30 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #0077cc;
+  color: #cccccc;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: #005999;
+  color: #ffffff;
 }
 
 /* Hero section */
 #hero {
   text-align: center;
   padding: 40px 0;
-  background-color: #e6f2ff;
+  background-color: #3a3a3a;
 }
 
 #hero h1 {
   font-size: 2em;
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 #hero p {
   font-size: 1.2em;
+  color: #dddddd;
 }
 
 /* Sections */
@@ -74,7 +76,7 @@ section {
 h2 {
   font-size: 1.8em;
   margin-bottom: 20px;
-  color: #0077cc;
+  color: #ffffff;
 }
 
 .subsection, .service {
@@ -84,11 +86,12 @@ h2 {
 h3 {
   font-size: 1.3em;
   margin-bottom: 10px;
-  color: #444;
+  color: #cccccc;
 }
 
 p {
   margin-bottom: 10px;
+  color: #dddddd;
 }
 
 /* Contact form */
@@ -101,14 +104,16 @@ form {
 
 input, textarea {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #555;
   border-radius: 4px;
+  background-color: #1f1f1f;
+  color: #eaeaea;
   font-family: inherit;
 }
 
 button {
   padding: 10px;
-  background-color: #0077cc;
+  background-color: #444;
   color: white;
   border: none;
   border-radius: 4px;
@@ -116,43 +121,23 @@ button {
 }
 
 button:hover {
-  background-color: #005999;
+  background-color: #666;
 }
 
 /* Contact info */
 .contact-info p {
   margin: 5px 0;
+  color: #cccccc;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px 0;
-  background-color: #ffffff;
-  border-top: 1px solid #ddd;
+  background-color: #1f1f1f;
+  border-top: 1px solid #444;
   font-size: 0.9em;
+  color: #aaaaaa;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #hero h1 {
-    font-size: 1.5em;
-  }
-
-  #hero p {
-    font-size: 1em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  h3 {
-    font-size: 1.1em;
-  }
-}
+/*
