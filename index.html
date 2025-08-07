@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PRECISIONTAX</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 </head>
+  <script>
+  document.getElementById("bookBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+    Calendly.initPopupWidget({ url: 'url="https://calendly.com/konstantina-vasaiti/30min" style="min-width:320px;height:700px;
+  });
+</script>
 <body>
   <header>
     <img src="https://i.postimg.cc/xCVSR485/logo.jpg" alt="Logo" class="logo">
@@ -83,4 +91,5 @@
   </footer>
 </body>
 </html>
+
 
