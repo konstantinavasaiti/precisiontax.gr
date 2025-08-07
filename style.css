@@ -4,6 +4,7 @@ body {
   background-color: #ffffff;
   color: #333333;
 }
+
 header {
   background-color: #d9d9d9;
   border-top: 4px solid #2c2c2c;
@@ -13,11 +14,13 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .logo-icon {
   width: 40px;
   height: 40px;
@@ -27,20 +30,31 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 .logo-icon::before {
   content: "✓";
   color: #ffffff;
-  font-size
+  font-size: 24px;
+}
+
+.logo-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2c2c2c;
+}
+
 nav ul {
   list-style: none;
-  display: flex;      
+  display: flex;
   gap: 30px;
   margin: 0;
   padding: 0;
 }
+
 nav li {
   display: inline-block;
 }
+
 nav a {
   text-decoration: none;
   color: #2c2c2c;
@@ -48,6 +62,69 @@ nav a {
   font-size: 1em;
   transition: color 0.3s ease;
 }
+
 nav a:hover {
   color: #000000;
+}
+
+#welcome {
+  background-color: #d9d9d9;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#welcome h1 {
+  font-size: 2em;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+#welcome p {
+  font-size: 1.2em;
+  color: #444444;
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section h2 {
+  font-size: 1.8em;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+section h3 {
+  font-size: 1.3em;
+  color: #444444;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 1em;
+  color: #555555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  #welcome h1 {
+    font-size: 1.5em;
+  }
+
+  section h2 {
+    font-size: 1.5em;
+  }
 }
