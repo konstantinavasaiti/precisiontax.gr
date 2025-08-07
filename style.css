@@ -1,161 +1,40 @@
+/* Βασικές ρυθμίσεις */
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1em;
-  line-height: 1.6;
-  color: #eaeaea;
-  background-color: #2c2c2c; /* Ανθρακί */
-  padding: 0 20px;
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
 }
 
 /* Header */
 header {
+  background-color: #d9d9d9; /* Ανοιχτό γκρι */
+  border-top: 4px solid #2c2c2c; /* Ανθρακί γραμμή πάνω */
+  border-bottom: 1px solid #2c2c2c;
+  padding: 20px 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 30px 0;
-  background-color: #3a3a3a; /* Ενιαίο ανθρακί φόντο */
-  border-bottom: 1px solid #444;
+  justify-content: space-between;
 }
 
+/* Logo */
 .logo {
-  width: 180px;
-  height: auto;
-  margin-bottom: 10px;
-  background-color: #3a3a3a; /* Ενσωμάτωση με φόντο */
-  padding: 10px;
-  border-radius: 8px;
-}
-
-nav ul {
-  list-style: none;
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #cccccc;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #ffffff;
-}
-
-/* Hero section */
-#hero {
-  text-align: center;
-  padding: 40px 0;
-  background-color: #d9d9d9; /* Γκρι ανοιχτό */
-  color: #2c2c2c;
-}
-
-#hero h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-#hero p {
-  font-size: 1.2em;
-}
-
-/* Sections */
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 10px;
-}
-
-h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-
-.subsection, .service {
-  margin-bottom: 30px;
-}
-
-h3 {
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  color: #cccccc;
-}
-
-p {
-  margin-bottom: 10px;
-  color: #dddddd;
-}
-
-/* Contact form */
-form {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 10px;
-  margin-bottom: 30px;
 }
 
-input, textarea {
-  padding: 10px;
-  border: 1px solid #555;
-  border-radius: 4px;
-  background-color: #1f1f1f;
-  color: #eaeaea;
-  font-family: inherit;
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #2c2c2c; /* Ανθρακί */
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button {
-  padding: 10px;
-  background-color: #444;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #666;
-}
-
-/* Contact info */
-.contact-info p {
-  margin: 5px 0;
-  color: #cccccc;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #1f1f1f;
-  border-top: 1px solid #444;
-  font-size: 0.9em;
-  color: #aaaaaa;
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #hero h1 {
-    font-size: 1.5em;
-  }
-
-  #hero p {
-    font-size: 1em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  h3 {
-    font-size: 1.1em;
-  }
-}
+.logo-icon::before {
+  content: "✓";
+  color: #ffffff;
+  font-size
