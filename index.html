@@ -16,7 +16,7 @@
         <li><a href="#company">Η Εταιρία μας</a></li>
         <li><a href="#services">Παροχές</a></li>
         <li><a href="#contact">Επικοινωνία</a></li>
-        <li><a href="#" id="bookBtn" class="btn">Κλείσε Ραντεβού</a></li>
+        <li><button id="openModal" class="btn">Κλείσε Ραντεβού</button></li>
       </ul>
     </nav>
   </header>
@@ -73,18 +73,9 @@
       <button type="submit">Αποστολή</button>
     </form>
     <div class="contact-info">
-      <p>
-        <svg class="icon" viewBox="0 0 24 24"><path d="M21 8V7l-3 2-2-1-2 1-2-1-2 1-2-1-3 2v1l3-2 2 1 2-1 2 1 2-1 2 1 3-2z"/></svg>
-        Email: info@precisiontax.gr
-      </p>
-      <p>
-        <svg class="icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.64.58 1 1 0 011 1v3.61a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.61a1 1 0 011 1 11.72 11.72 0 00.58 3.64 1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
-        Τηλέφωνο: +30 6987303955
-      </p>
-      <p>
-        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
-        Διεύθυνση: Φιλικής Εταιρίας 12, Ευκαρπία, Θεσσαλονίκη
-      </p>
+      <p>📧 info@precisiontax.gr</p>
+      <p>📞 +30 6987303955</p>
+      <p>📍 Φιλικής Εταιρίας 12, Ευκαρπία, Θεσσαλονίκη</p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
@@ -93,11 +84,26 @@
     <p>&copy; 2025 PRECISIONTAX. Όλα τα δικαιώματα διατηρούνται.</p>
   </footer>
 
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Επιλογή Επικοινωνίας</h2>
+      <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/konstantina-vasaiti/30min'});">📞 Τηλεφωνική Κλήση</button>
+      <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/konstantina-vasaiti/new-meeting'});">🎥 Βιντεοκλήση</button>
+    </div>
+  </div>
+
   <script>
-    document.getElementById("bookBtn").addEventListener("click", function(e) {
-      e.preventDefault();
-      Calendly.initPopupWidget({ url: 'https://calendly.com/konstantina-vasaiti/30min' });
-    });
+    const modal = document.getElementById("modal");
+    const btn = document.getElementById("openModal");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = () => modal.style.display = "block";
+    span.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+      if (event.target == modal) modal.style.display = "none";
+    };
   </script>
 </body>
 </html>
