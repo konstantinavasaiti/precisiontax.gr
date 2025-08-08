@@ -1,38 +1,52 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1em;
-  line-height: 1.6;
-  color: #eaeaea;
-  background-color: #2c2c2c;
-  padding: 0 20px;
   margin: 0;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
 }
 
-/* Header */
 header {
+  background-color: #d9d9d9;
+  border-top: 4px solid #2c2c2c;
+  border-bottom: 1px solid #2c2c2c;
+  padding: 20px 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 30px 0;
-  background-color: #3a3a3a;
-  border-bottom: 1px solid #444;
+  justify-content: space-between;
 }
 
 .logo {
-  width: 180px;
-  height: auto;
-  margin-bottom: 10px;
-  background-color: #3a3a3a;
-  padding: 10px;
-  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #2c2c2c;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon::before {
+  content: "✓";
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.logo-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2c2c2c;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
@@ -43,60 +57,70 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #cccccc;
-  font-weight: bold;
+  color: #2c2c2c;
+  font-weight: 600;
+  font-size: 1em;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #ffffff;
+  color: #000000;
 }
 
-/* Hero section */
-#hero {
-  text-align: center;
-  padding: 40px 0;
+#welcome {
   background-color: #d9d9d9;
-  color: #2c2c2c;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-#hero h1 {
+#welcome h1 {
   font-size: 2em;
+  color: #2c2c2c;
   margin-bottom: 10px;
 }
 
-#hero p {
+#welcome p {
   font-size: 1.2em;
+  color: #444444;
 }
 
-/* Sections */
 section {
   max-width: 900px;
   margin: 40px auto;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
-h2 {
+section h2 {
   font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #ffffff;
+  color: #2c2c2c;
+  margin-bottom: 10px;
 }
 
-.subsection, .service {
-  margin-bottom: 30px;
-}
-
-h3 {
+section h3 {
   font-size: 1.3em;
+  color: #444444;
   margin-bottom: 10px;
-  color: #cccccc;
 }
 
-p {
-  margin-bottom: 10px;
-  color: #dddddd;
+section p {
+  font-size: 1em;
+  color: #555555;
+  line-height: 1.6;
 }
 
-/* Contact form */
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-left: 4px solid #2c2c2c;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -106,16 +130,14 @@ form {
 
 input, textarea {
   padding: 10px;
-  border: 1px solid #555;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #1f1f1f;
-  color: #eaeaea;
   font-family: inherit;
 }
 
 button {
   padding: 10px;
-  background-color: #444;
+  background-color: #2c2c2c;
   color: white;
   border: none;
   border-radius: 4px;
@@ -123,46 +145,40 @@ button {
 }
 
 button:hover {
-  background-color: #666;
+  background-color: #444444;
 }
 
-/* Contact info */
 .contact-info p {
   margin: 5px 0;
-  color: #cccccc;
+  color: #555555;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px 0;
-  background-color: #1f1f1f;
-  border-top: 1px solid #444;
+  background-color: #2c2c2c;
+  color: #ffffff;
   font-size: 0.9em;
-  color: #aaaaaa;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   nav ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 10px;
   }
 
-  #hero h1 {
+  #welcome h1 {
     font-size: 1.5em;
   }
 
-  #hero p {
-    font-size: 1em;
-  }
-
-  h2 {
+  section h2 {
     font-size: 1.5em;
-  }
-
-  h3 {
-    font-size: 1.1em;
   }
 .btn {
   background-color: #007BFF;
@@ -175,3 +191,14 @@ footer {
 .btn:hover {
   background-color: #0056b3;
 }
+<style>
+#typeModal div[style*="cursor:pointer"] {
+  transition: transform 0.2s ease;
+}
+#typeModal div[style*="cursor:pointer"]:hover {
+  transform: scale(1.05);
+}
+#typeModal img {
+  margin-bottom: 10px;
+}
+</style>
