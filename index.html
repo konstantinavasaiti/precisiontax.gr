@@ -5,46 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PRECISIONTAX</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 </head>
 <body>
-
-  <header class="top-bar">
-    <img src="logo.png" alt="Logo" class="logo">
+  <header>
+    <img src="https://i.postimg.cc/xCVSR485/logo.jpg" alt="Logo" class="logo">
     <nav>
-      <ul class="menu">
+      <ul>
         <li><a href="#company">Η Εταιρία μας</a></li>
         <li><a href="#services">Παροχές</a></li>
         <li><a href="#contact">Επικοινωνία</a></li>
+        <li><button id="openModal" class="btn">Κλείσε Ραντεβού</button></li>
       </ul>
     </nav>
   </header>
 
-  <main class="main-content">
-    <section id="company">
-      <h2>Η Εταιρία μας</h2>
-      <p>Η PRECISIONTAX είναι μια σύγχρονη φοροτεχνική εταιρία με έδρα τη Θεσσαλονίκη. Ξεκινήσαμε το 2025 με στόχο την παροχή υψηλής ποιότητας υπηρεσιών διαδικτυακά, αξιοποιώντας την τεχνολογία για να εξυπηρετούμε πελάτες σε όλη την Ελλάδα. Το όραμά μας είναι να γίνουμε σημείο αναφοράς για φοροτεχνικές λύσεις στην Ελλάδα, προσφέροντας καινοτόμες υπηρεσίες με επίκεντρο τον πελάτη.</p>
-    </section>
+  <!-- Modal με επιλογές -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Επιλογή Επικοινωνίας</h2>
+      <button onclick="openCalendly('https://calendly.com/konstantina-vasaiti/30min')">📞 Τηλεφωνική Κλήση</button>
+      <button onclick="openCalendly('https://calendly.com/konstantina-vasaiti/new-meeting')">🎥 Βιντεοκλήση</button>
+    </div>
+  </div>
 
-    <section id="services">
-      <h2>Παροχές</h2>
-      <ul>
-        <li>Φορολογικές Δηλώσεις</li>
-        <li>Λογιστική Υποστήριξη</li>
-        <li>Συμβουλευτική Επιχειρήσεων</li>
-      </ul>
-    </section>
+  <!-- Υπόλοιπο περιεχόμενο της σελίδας -->
+  <section id="hero">
+    <h1>Καλώς ήρθατε στην PRECISIONTAX</h1>
+    <p>Αξιοπιστία, ακρίβεια και επαγγελματισμός στις φοροτεχνικές υπηρεσίες.</p>
+  </section>
 
-    <section id="contact">
-      <h2>Επικοινωνία</h2>
-      <p>Email: info@precisiontax.gr</p>
-      <p>Τηλέφωνο: +30 6987303955</p>
-      <p>Διεύθυνση: Φιλικής Εταιρίας 12, Ευκαρπία, Θεσσαλονίκη</p>
-    </section>
-  </main>
+  <!-- ... άλλα sections όπως company, services, contact ... -->
 
   <footer>
     <p>&copy; 2025 PRECISIONTAX. Όλα τα δικαιώματα διατηρούνται.</p>
   </footer>
 
+  <!-- Scripts -->
+  <script>
+    const modal = document.getElementById("modal");
+    const btn = document.getElementById("openModal");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = () => modal.style.display = "block";
+    span.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+      if (event.target == modal) modal.style.display = "none";
+    };
+
+    function openCalendly(url) {
+      Calendly.initPopupWidget({ url: url });
+      modal.style.display = "none";
+    }
+  </script>
 </body>
 </html>
