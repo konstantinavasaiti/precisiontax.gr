@@ -5,100 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PRECISIONTAX</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 </head>
 <body>
-
   <header>
     <div class="logo-container">
       <img src="logo.png" alt="PRECISIONTAX Logo">
-      <div class="header-text">
+      <div class="title-group">
         <h1>PRECISIONTAX</h1>
         <p>Φοροτεχνικές Υπηρεσίες με Ακρίβεια</p>
       </div>
     </div>
-    <button id="appointmentBtn">Κλείσε Ραντεβού</button>
+    <nav>
+      <a href="#company">Η Εταιρεία</a>
+      <a href="#services">Παροχές</a>
+      <a href="#contact">Επικοινωνία</a>
+    </nav>
+    <button class="appointment-btn" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/precisiontax/ραντεβού'}); return false;">
+      Κλείσε Ραντεβού
+    </button>
   </header>
 
-  <nav>
-    <a href="#company">Η Εταιρία</a>
-    <a href="#services">Παροχές</a>
-    <a href="#contact">Επικοινωνία</a>
-  </nav>
-
-  <section id="company">
-    <h2>Η Εταιρία μας</h2>
-    <div class="subsection">
+  <main>
+    <section id="company">
+      <h2>Η Εταιρεία μας</h2>
       <h3>Ποιοι είμαστε</h3>
-      <p>Η PRECISIONTAX είναι μια σύγχρονη φοροτεχνική εταιρία με έδρα τη Θεσσαλονίκη.</p>
-    </div>
-    <div class="subsection">
+      <p>Η PRECISIONTAX είναι μια σύγχρονη φοροτεχνική εταιρεία με έδρα τη Θεσσαλονίκη.</p>
+
       <h3>Ιστορικό</h3>
-      <p>Ξεκινήσαμε το 2025 με στόχο την παροχή υψηλής ποιότητας υπηρεσιών διαδικτυακά, αξιοποιώντας την τεχνολογία για να εξυπηρετούμε πελάτες σε όλη την Ελλάδα.</p>
-    </div>
-    <div class="subsection">
-      <h3>Όραμα</h3>
-      <p>Να γίνουμε σημείο αναφοράς για φοροτεχνικές λύσεις στην Ελλάδα, προσφέροντας καινοτόμες υπηρεσίες με επίκεντρο τον πελάτη.</p>
-    </div>
-  </section>
-
-  <section id="services">
-    <h2>Παροχές</h2>
-    <div class="service">
-      <h3>Φορολογικές Δηλώσεις</h3>
-      <p>Αναλαμβάνουμε την υποβολή όλων των φορολογικών δηλώσεων, με ακρίβεια και συνέπεια, για ιδιώτες και επιχειρήσεις.</p>
-    </div>
-    <div class="service">
-      <h3>Λογιστική Υποστήριξη</h3>
-      <p>Ολοκληρωμένες λογιστικές υπηρεσίες για επιχειρήσεις κάθε μεγέθους, με στόχο την ορθή και αποδοτική διαχείριση των οικονομικών τους.</p>
-    </div>
-    <div class="service">
-      <h3>Συμβουλευτική Επιχειρήσεων</h3>
-      <p>Στρατηγική καθοδήγηση για ανάπτυξη και βελτιστοποίηση, με βάση τις ανάγκες και τους στόχους κάθε επιχείρησης.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Επικοινωνία</h2>
-    <form>
-      <label for="name">Όνομα:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Μήνυμα:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Αποστολή</button>
-    </form>
-    <div class="contact-info">
-      <p>📧 info@precisiontax.gr</p>
-      <p>📞 +30 6987303955</p>
-      <p>📍 Φιλικής Εταιρίας 12, Ευκαρπία, Θεσσαλονίκη</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="250" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <div id="appointmentModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Επιλέξτε τρόπο επικοινωνίας</h3>
-      <button onclick="window.location.href='tel:+306987303955'">📞 Τηλεφωνική Κλήση</button>
-      <button onclick="window.open('https://meet.jit.si/precisiontax', '_blank')">🎥 Βιντεοκλήση</button>
-    </div>
-  </div>
-
-  <script>
-    const modal = document.getElementById("appointmentModal");
-    const btn = document.getElementById("appointmentBtn");
-    const span = document.querySelector(".close");
-
-    btn.onclick = () => modal.style.display = "block";
-    span.onclick = () => modal.style.display = "none";
-    window.onclick = (e) => {
-      if (e.target == modal) modal.style.display = "none";
-    };
-  </script>
-
-</body>
-</html>
+      <p>Ξεκινήσαμε το 2025 με στόχο την παροχή υψηλής ποιότητας υπηρε
