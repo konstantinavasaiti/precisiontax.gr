@@ -4,61 +4,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PRECISIONTAX</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #0066cc;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #005bb5;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      margin-top: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #004080;
+    }
+    .subsection, .service, .contact-info {
+      margin-bottom: 1.5rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label, input, textarea, button {
+      margin-bottom: 1rem;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 0.7rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #003366;
+    }
+    iframe {
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <img src="https://i.postimg.cc/xCVSR485/logo.jpg" alt="Logo" class="logo">
-    <nav>
-      <ul>
-        <li><a href="#company">Η Εταιρία μας</a></li>
-        <li><a href="#services">Παροχές</a></li>
-        <li><a href="#contact">Επικοινωνία</a></li>
-        <li><button id="openModal" class="btn">Κλείσε Ραντεβού</button></li>
-      </ul>
-    </nav>
+    <h1>PRECISIONTAX</h1>
+    <p>Φοροτεχνικές Υπηρεσίες με Ακρίβεια</p>
   </header>
 
-  <!-- Modal με επιλογές -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Επιλογή Επικοινωνίας</h2>
-      <button onclick="openCalendly('https://calendly.com/konstantina-vasaiti/30min')">📞 Τηλεφωνική Κλήση</button>
-      <button onclick="openCalendly('https://calendly.com/konstantina-vasaiti/new-meeting')">🎥 Βιντεοκλήση</button>
-    </div>
-  </div>
+  <nav>
+    <a href="#company">Η Εταιρία</a>
+    <a href="#services">Παροχές</a>
+    <a href="#contact">Επικοινωνία</a>
+  </nav>
 
-  <!-- Υπόλοιπο περιεχόμενο της σελίδας -->
-  <section id="hero">
-    <h1>Καλώς ήρθατε στην PRECISIONTAX</h1>
-    <p>Αξιοπιστία, ακρίβεια και επαγγελματισμός στις φοροτεχνικές υπηρεσίες.</p>
+  <section id="company">
+    <h2>Η Εταιρία μας</h2>
+    <div class="subsection">
+      <h3>Ποιοι είμαστε</h3>
+      <p>Η PRECISIONTAX είναι μια σύγχρονη φοροτεχνική εταιρία με έδρα τη Θεσσαλονίκη.</p>
+    </div>
+    <div class="subsection">
+      <h3>Ιστορικό</h3>
+      <p>Ξεκινήσαμε το 2025 με στόχο την παροχή υψηλής ποιότητας υπηρεσιών διαδικτυακά, αξιοποιώντας την τεχνολογία για να εξυπηρετούμε πελάτες σε όλη την Ελλάδα.</p>
+    </div>
+    <div class="subsection">
+      <h3>Όραμα</h3>
+      <p>Να γίνουμε σημείο αναφοράς για φοροτεχνικές λύσεις στην Ελλάδα, προσφέροντας καινοτόμες υπηρεσίες με επίκεντρο τον πελάτη.</p>
+    </div>
   </section>
 
-  <!-- ... άλλα sections όπως company, services, contact ... -->
+  <section id="services">
+    <h2>Παροχές</h2>
+    <div class="service">
+      <h3>Φορολογικές Δηλώσεις</h3>
+      <p>Αναλαμβάνουμε την υποβολή όλων των φορολογικών δηλώσεων, με ακρίβεια και συνέπεια, για ιδιώτες και επιχειρήσεις.</p>
+    </div>
+    <div class="service">
+      <h3>Λογιστική Υποστήριξη</h3>
+      <p>Ολοκληρωμένες λογιστικές υπηρεσίες για επιχειρήσεις κάθε μεγέθους, με στόχο την ορθή και αποδοτική διαχείριση των οικονομικών τους.</p>
+    </div>
+    <div class="service">
+      <h3>Συμβουλευτική Επιχειρήσεων</h3>
+      <p>Στρατηγική καθοδήγηση για ανάπτυξη και βελτιστοποίηση, με βάση τις ανάγκες και τους στόχους κάθε επιχείρησης.</p>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 PRECISIONTAX. Όλα τα δικαιώματα διατηρούνται.</p>
-  </footer>
+  <section id="contact">
+    <h2>Επικοινωνία</h2>
+    <form>
+      <label for="name">Όνομα:</label>
+      <input type="text" id="name" name="name" required>
 
-  <!-- Scripts -->
-  <script>
-    const modal = document.getElementById("modal");
-    const btn = document.getElementById("openModal");
-    const span = document.getElementsByClassName("close")[0];
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-    btn.onclick = () => modal.style.display = "block";
-    span.onclick = () => modal.style.display = "none";
-    window.onclick = (event) => {
-      if (event.target == modal) modal.style.display = "none";
-    };
+      <label for="message">Μήνυμα:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-    function openCalendly(url) {
-      Calendly.initPopupWidget({ url: url });
-      modal.style.display = "none";
-    }
-  </script>
-</body>
-</html>
+      <button type="submit">Αποστολή</button>
+    </form>
+    <div class="contact-info">
