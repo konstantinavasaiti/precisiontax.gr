@@ -17,6 +17,20 @@
       color: white;
       padding: 1rem;
       text-align: center;
+      position: relative;
+    }
+    #appointmentBtn {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    #appointmentBtn:hover {
+      background-color: #e65c00;
     }
     nav {
       background-color: #0066cc;
@@ -75,6 +89,47 @@
       border-radius: 8px;
       margin-top: 1rem;
     }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: white;
+      margin: 15% auto;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+    }
+    .modal-content button {
+      margin: 1rem 0;
+      padding: 0.7rem 1rem;
+      width: 100%;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .modal-content button:first-of-type {
+      background-color: #007bff;
+      color: white;
+    }
+    .modal-content button:last-of-type {
+      background-color: #28a745;
+      color: white;
+    }
+    .close {
+      position: absolute;
+      top: 10px; right: 20px;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -87,6 +142,7 @@
   <header>
     <h1>PRECISIONTAX</h1>
     <p>Φοροτεχνικές Υπηρεσίες με Ακρίβεια</p>
+    <button id="appointmentBtn">Κλείσε Ραντεβού</button>
   </header>
 
   <nav>
@@ -142,3 +198,30 @@
       <button type="submit">Αποστολή</button>
     </form>
     <div class="contact-info">
+      <p>📧 info@precisiontax.gr</p>
+      <p>📞 +30 6987303955</p>
+      <p>📍 Φιλικής Εταιρίας 12, Ευκαρπία, Θεσσαλονίκη</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="250" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Επιλέξτε τρόπο επικοινωνίας</h3>
+      <button onclick="window.location.href='tel:+306987303955'">📞 Τηλεφωνική Κλήση</button>
+      <button onclick="window.open('https://meet.jit.si/precisiontax', '_blank')">🎥 Βιντεοκλήση</button>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("appointmentModal");
+    const btn = document.getElementById("appointmentBtn");
+    const span = document.querySelector(".close");
+
+    btn.onclick = () => modal.style.display = "block";
+    span.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => {
+      if (e.target == modal) modal.style.display = "none";
+    };
+  </script>
