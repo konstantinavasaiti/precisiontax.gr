@@ -15,6 +15,7 @@
     <nav>
       <a href="#company">Η Εταιρεία</a>
       <a href="#vision">Όραμα</a>
+      <a href="#services">Υπηρεσίες</a>
       <a href="#contact">Επικοινωνία</a>
     </nav>
     <button id="bookBtn">Κλείσε Ραντεβού</button>
@@ -31,12 +32,38 @@
       <p>Να αποτελέσουμε σημείο αναφοράς στον χώρο των φοροτεχνικών υπηρεσιών, αξιοποιώντας την τεχνολογία και την ανθρώπινη προσέγγιση για να προσφέρουμε λύσεις που κάνουν τη διαφορά.</p>
     </section>
 
+    <section id="services">
+      <h2>Υπηρεσίες</h2>
+      <p>Η PRECISIONTAX προσφέρει ολοκληρωμένες λογιστικές και φοροτεχνικές υπηρεσίες για:</p>
+      <ul>
+        <li>📊 Επιχειρήσεις: Τήρηση βιβλίων, υποβολή δηλώσεων, μισθοδοσία, φορολογικός σχεδιασμός.</li>
+        <li>👤 Ιδιώτες: Φορολογικές δηλώσεις, συμβουλευτική, επίλυση φορολογικών θεμάτων.</li>
+      </ul>
+      <p>Με συνέπεια και επαγγελματισμό, αναλαμβάνουμε κάθε υπόθεση με στόχο την καλύτερη δυνατή εξυπηρέτηση.</p>
+    </section>
+
     <section id="contact">
       <h2>Επικοινωνία</h2>
       <p>
         📧 Email: <a href="mailto:Konstantina.vasaiti@gmail.com">Konstantina.vasaiti@gmail.com</a><br>
         📍 Διεύθυνση: Φιλικής Εταιρίας 12, Ευκαρπία, ΤΚ 56429<br>
       </p>
+
+      <form action="https://formspree.io/f/xdkdrryj" method="POST" class="contact-form">
+        <label for="name">Ονοματεπώνυμο:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="subject">Θέμα:</label>
+        <input type="text" id="subject" name="subject" />
+
+        <label for="message">Μήνυμα:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Αποστολή</button>
+      </form>
     </section>
   </main>
 
