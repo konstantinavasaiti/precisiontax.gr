@@ -90,3 +90,9 @@ nav a {
 .optionBtn:hover {
   background-color: #e65c00;
 }
+.calendly-inline-widget {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: none;
+}
