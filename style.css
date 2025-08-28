@@ -96,3 +96,41 @@ nav a {
   margin: 0 auto;
   border: none;
 }
+.blog-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.blog-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.blog-post {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.blog-post h3 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.blog-post .date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.blog-post a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-post a:hover {
+  text-decoration: underline;
+}
