@@ -116,6 +116,47 @@ footer p {
   opacity: 0.8;
 }
 
+/* === Dropdown Menu === */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #0055a5;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #eef6ff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* === Responsive Design === */
 @media (max-width: 768px) {
   nav {
@@ -124,7 +165,8 @@ footer p {
     align-items: center;
   }
 
-  nav a {
+  nav a,
+  .dropbtn {
     margin: 8px 0;
     font-size: 16px;
   }
@@ -146,43 +188,9 @@ footer p {
   .social-icons a {
     font-size: 24px;
   }
-}
-.offers-section {
-  background-color: #eef6ff;
-  padding: 40px 20px;
-  text-align: center;
-  border-top: 2px solid #0055a5;
-}
 
-.offers-section h2 {
-  color: #0055a5;
-  margin-bottom: 30px;
-  font-size: 24px;
-}
-
-.offer-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-}
-
-.offer-list button {
-  background-color: #0055a5;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  width: 100%;
-  max-width: 400px;
-}
-
-.offer-list button:hover {
-  background-color: #003f7f;
-  transform: scale(1.05);
+  .dropdown-content {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
