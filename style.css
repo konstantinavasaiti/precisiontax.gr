@@ -134,3 +134,26 @@ nav a {
 .blog-post a:hover {
   text-decoration: underline;
 }
+/* Βασικό στυλ για desktop */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+/* Responsive για κινητά */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
