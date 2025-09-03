@@ -7,126 +7,52 @@ body {
   color: #333;
 }
 
+/* === Header & Navigation === */
 header {
   background-color: #0055a5;
   color: white;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
-nav {
-  margin-top: 10px;
+header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
-nav a {
+header p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 16px;
+}
+
+nav a,
+.dropbtn {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-main {
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-h1, h2, h3 {
-  color: #0055a5;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-.contact-form {
-  margin-top: 20px;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.contact-form button {
-  background-color: #0055a5;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+  padding: 8px 12px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
+nav a:hover,
+.dropbtn:hover {
   background-color: #003f7f;
-}
-
-/* === Ζωντανό Footer με Social Media === */
-footer {
-  background: linear-gradient(to right, #0055a5, #003f7f);
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.footer-container h3 {
-  margin-bottom: 20px;
-  font-size: 22px;
-  letter-spacing: 1px;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  font-size: 28px;
-  color: #fff;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #ffd700;
-  transform: scale(1.2) rotate(-5deg);
-}
-
-footer p {
-  margin-top: 30px;
-  font-size: 14px;
-  opacity: 0.8;
 }
 
 /* === Dropdown Menu === */
 .dropdown {
   position: relative;
   display: inline-block;
-}
-
-.dropbtn {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0 10px;
 }
 
 .dropdown-content {
@@ -138,6 +64,8 @@ footer p {
   z-index: 1;
   border-radius: 6px;
   overflow: hidden;
+  top: 100%;
+  left: 0;
 }
 
 .dropdown-content a {
@@ -146,51 +74,4 @@ footer p {
   text-decoration: none;
   display: block;
   font-weight: normal;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-  background-color: #eef6ff;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* === Responsive Design === */
-@media (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a,
-  .dropbtn {
-    margin: 8px 0;
-    font-size: 16px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    font-size: 16px;
-  }
-
-  .calendly-inline-widget {
-    height: 500px;
-  }
-
-  footer {
-    padding: 30px 10px;
-  }
-
-  .social-icons a {
-    font-size: 24px;
-  }
-
-  .dropdown-content {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
+  transition: background
