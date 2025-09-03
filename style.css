@@ -1,159 +1,149 @@
+/* === Βασικά Στυλ === */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #fff;
-  color: #222;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 header {
-  background: #000;
-  color: #fff;
+  background-color: #0055a5;
+  color: white;
   padding: 20px;
   text-align: center;
 }
 
-.logo {
-  max-height: 60px;
-  margin-bottom: 10px;
+nav {
+  margin-top: 10px;
 }
 
 nav a {
+  color: white;
   margin: 0 10px;
-  color: #fff;
   text-decoration: none;
+  font-weight: bold;
 }
 
-#bookBtn {
-  background-color: #ff6600;
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+  color: #0055a5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background-color: #0055a5;
   color: white;
   border: none;
   padding: 10px 20px;
-  margin-top: 15px;
   cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-#bookBtn:hover {
-  background-color: #e65c00;
+.contact-form button:hover {
+  background-color: #003f7f;
 }
 
-/* Modal styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.6);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 15% auto;
-  padding: 30px;
-  border: 1px solid #888;
-  width: 300px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.closeBtn {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.closeBtn:hover {
-  color: #000;
-}
-
-.optionBtn {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #ff6600;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.optionBtn:hover {
-  background-color: #e65c00;
-}
-.calendly-inline-widget {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  border: none;
-}
-.blog-section {
-  max-width: 900px;
-  margin: 0 auto;
+/* === Ζωντανό Footer με Social Media === */
+footer {
+  background: linear-gradient(to right, #0055a5, #003f7f);
+  color: #fff;
   padding: 40px 20px;
-}
-
-.blog-section h2 {
   text-align: center;
-  margin-bottom: 40px;
-  color: #000;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.blog-post {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
+.footer-container h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
-.blog-post h3 {
-  color: #000;
-  margin-bottom: 10px;
+.social-icons a {
+  margin: 0 10px;
+  font-size: 28px;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.blog-post .date {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 10px;
+.social-icons a:hover {
+  color: #ffd700;
+  transform: scale(1.2) rotate(-5deg);
 }
 
-.blog-post a {
-  color: #ff6600;
-  text-decoration: none;
-  font-weight: bold;
+footer p {
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-.blog-post a:hover {
-  text-decoration: underline;
-}
-/* Βασικό στυλ για desktop */
-.container {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px;
-}
-
-/* Responsive για κινητά */
+/* === Responsive Design === */
 @media (max-width: 768px) {
-  .container {
+  nav {
+    display: flex;
     flex-direction: column;
-    padding: 20px;
+    align-items: center;
   }
 
-  h1 {
+  nav a {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .calendly-inline-widget {
+    height: 500px;
+  }
+
+  footer {
+    padding: 30px 10px;
+  }
+
+  .social-icons a {
     font-size: 24px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
   }
 }
