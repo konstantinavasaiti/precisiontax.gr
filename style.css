@@ -147,3 +147,42 @@ footer p {
     font-size: 24px;
   }
 }
+.offers-section {
+  background-color: #eef6ff;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid #0055a5;
+}
+
+.offers-section h2 {
+  color: #0055a5;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.offer-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.offer-list button {
+  background-color: #0055a5;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+.offer-list button:hover {
+  background-color: #003f7f;
+  transform: scale(1.05);
+}
