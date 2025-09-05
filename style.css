@@ -1,7 +1,9 @@
 /* === Βασικά Στυλ === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
@@ -9,8 +11,8 @@ body {
 
 /* === Header & Navigation === */
 header {
-  background-color: #0055a5;
-  color: white;
+  background-color: #D8F3DC; /* φυστικί παλ */
+  color: #333;
   padding: 30px 20px;
   text-align: center;
 }
@@ -18,9 +20,9 @@ header {
 header h1 {
   font-size: 36px;
   font-weight: bold;
-  color: #ffffff;
+  color: #333;
   text-transform: uppercase;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 header p {
@@ -34,21 +36,27 @@ nav {
   flex-wrap: wrap;
   gap: 15px;
   font-size: 16px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #D8F3DC;
+  padding: 10px 0;
 }
 
 nav a,
 .dropbtn {
-  color: white;
+  color: #333;
   text-decoration: none;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 4px;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 6px;
   transition: background-color 0.3s ease;
+  background-color: #D8F3DC;
 }
 
 nav a:hover,
 .dropbtn:hover {
-  background-color: #003f7f;
+  background-color: #CFE8D5;
 }
 
 /* === Dropdown Menu === */
@@ -71,10 +79,19 @@ nav a:hover,
 }
 
 .dropdown-content a {
-  color: #0055a5;
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   font-weight: normal;
-  transition: background
+  transition: background-color 0.3s ease;
+}
 
+.dropdown-content a:hover {
+  background-color: #D8F3DC;
+}
+
+/* === Ενεργοποίηση Dropdown === */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
