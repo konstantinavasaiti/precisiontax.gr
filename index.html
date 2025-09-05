@@ -14,7 +14,7 @@
   <!-- Calendly Widget -->
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-  <!-- Google Analytics -->
+  <!-- Google Analytics & Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-15JKZF3FZD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,8 +22,6 @@
     gtag('js', new Date());
     gtag('config', 'G-15JKZF3FZD');
   </script>
-
-  <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17507699859"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -122,6 +120,34 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
+    footer {
+      background-color: #D8F3DC;
+      color: #333;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .footer-container h3 {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .footer-container a {
+      color: #333;
+      margin: 0 10px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-container a:hover {
+      color: #555;
+    }
+
+    .footer-container p {
+      margin-top: 20px;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -180,18 +206,4 @@
       </p>
 
       <form action="https://formspree.io/f/xdkdrryj" method="POST" class="contact-form">
-        <label for="name">Ονοματεπώνυμο:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="subject">Θέμα:</label>
-        <input type="text" id="subject" name="subject" />
-
-        <label for="message">Μήνυμα:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Αποστολή</button>
-      </form>
-    </section
+        <label for
