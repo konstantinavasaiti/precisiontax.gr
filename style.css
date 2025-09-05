@@ -90,3 +90,44 @@ nav a:hover,
 }
 
 .dropdown:hover .dropdown
+footer {
+  background-color: #D8F3DC;
+  color: #333;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer-container h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  font-size: 28px;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #555;
+  transform: scale(1.2);
+}
+
+.footer-container p {
+  font-size: 14px;
+  margin-top: 10px;
+}
