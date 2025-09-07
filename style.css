@@ -1,3 +1,4 @@
+/* Βασικές Ρυθμίσεις */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -6,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Επικεφαλίδα */
 header {
   background-color: #003366;
   color: white;
@@ -13,14 +15,18 @@ header {
   text-align: center;
 }
 
+/* Πλοήγηση */
 nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   background-color: #005599;
+  position: relative;
+  z-index: 10;
 }
 
-nav a, .dropbtn {
+nav a,
+.dropbtn {
   color: white;
   padding: 14px 16px;
   text-decoration: none;
@@ -30,10 +36,15 @@ nav a, .dropbtn {
   cursor: pointer;
 }
 
-nav a:hover, .dropbtn:hover {
+nav a:hover,
+.dropbtn:hover,
+nav a:focus,
+.dropbtn:focus {
   background-color: #003366;
+  outline: none;
 }
 
+/* Dropdown */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -44,8 +55,8 @@ nav a:hover, .dropbtn:hover {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 220px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
 .dropdown-content a {
@@ -63,12 +74,14 @@ nav a:hover, .dropbtn:hover {
   display: block;
 }
 
+/* Περιεχόμενο */
 section {
   padding: 40px;
   max-width: 800px;
   margin: auto;
 }
 
+/* Φόρμα Επικοινωνίας */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -84,6 +97,7 @@ section {
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .contact-form button {
@@ -100,6 +114,7 @@ section {
   background-color: #003366;
 }
 
+/* Footer */
 .footer-container {
   background-color: #003366;
   color: white;
@@ -112,10 +127,35 @@ section {
   margin: 0 10px;
   font-size: 20px;
 }
+
+/* Calendly Popup */
 .calendly-overlay {
   z-index: 9999 !important;
 }
 
 body.calendly-popup-open {
   overflow: hidden !important;
+}
+
+/* Responsive για κινητά */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
 }
