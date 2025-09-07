@@ -112,3 +112,10 @@ section {
   margin: 0 10px;
   font-size: 20px;
 }
+.calendly-overlay {
+  z-index: 9999 !important;
+}
+
+body.calendly-popup-open {
+  overflow: hidden !important;
+}
